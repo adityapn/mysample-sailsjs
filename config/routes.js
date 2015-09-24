@@ -16,6 +16,11 @@ module.exports.routes = {
      action: 'loginCheck'   
   },
 
+  '/logout':{
+    controller: 'auth',
+    action: 'logout'   
+  },
+
   '/register':{
     view: 'register'
   }
