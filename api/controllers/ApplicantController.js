@@ -1,17 +1,24 @@
-/**
- * ApplicantController
- *
- * @description :: Server-side logic for managing applicants
- * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
- */
 
 module.exports = {
 	applicants: function (req,res) {
-		return res.json(
-			{
-				name:"applicants"	
-			}
-		);
+		var newApplicant = {
+			username: "pnaditya",
+			firstname: null,
+			lastname: null,
+			middlename: null,
+			password: "password",
+			email: "pnaditya@gmail.com",
+			mobile:null,
+			emailVerified:false,
+			dateOfBirth:null
+		};
+
+		Applicant.create(newApplicant).exec(function createCB(err, created){
+			if(err){
+				return res.json(err);				
+			}		  
+			return res.json(created);							
+		});			
 	}	
 };
 

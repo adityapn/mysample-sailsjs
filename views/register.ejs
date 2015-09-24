@@ -1,0 +1,9 @@
+<h2>Register</h2>
+
+<form action="/applicant" method="POST">
+	Username : <input type="text" name="username" id="username" /> <br/>
+	Password : <input type="password" name="password" id="password" /> <br/>
+	Email :  <input type="email" name="email" id="email" /> <br/>
+    <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+    <input type="submit" value="Register"/>
+</form>

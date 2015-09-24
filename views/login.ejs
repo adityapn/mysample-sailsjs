@@ -1,0 +1,8 @@
+<h2>Login</h2>
+
+<form action="/login" method="POST">
+	Username : <input type="text" name="username" id="username" /> <br/>
+	Password : <input type="password" name="password" id="password" /> <br/>
+    <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+    <input type="submit" value="Login"/>
+</form>
