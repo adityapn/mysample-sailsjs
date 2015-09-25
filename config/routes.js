@@ -7,21 +7,27 @@ module.exports.routes = {
   },
 
   'get /login' : {
-       controller: 'auth',
+       controller: 'login',
        action: 'login'   
   },
 
   'post /login':{
-     controller: 'auth',
+     controller: 'login',
      action: 'loginCheck'   
   },
 
   '/logout':{
-    controller: 'auth',
+    controller: 'logout',
     action: 'logout'   
   },
 
-  '/register':{
-    view: 'register'
+  'get /register':{
+    controller: 'register',
+    action: 'register'
+  },
+
+  'post /register':{
+    controller: 'register',
+    action: 'registerUser'
   }
 };

@@ -2,6 +2,12 @@ var bcrypt = require('bcrypt');
 
 module.exports = {
 
+  _config: {
+    actions: false,
+    shortcuts: false,
+    rest: false
+  },
+
   attributes: {
   	id: {
       type: 'integer',
@@ -41,8 +47,7 @@ module.exports = {
     	columnName: 'mobile'
     },
     emailVerified:{
-    	type: 'boolean',
-    	unique: true,
+    	type: 'boolean',    	
     	columnName: 'emailVerified',
       defaultsTo : false
     },

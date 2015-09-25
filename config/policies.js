@@ -6,11 +6,15 @@ module.exports.policies = {
     '*': 'isAuthenticated'
   },
 
-  'applicant':{
+  'LoginController':{
+    '*': 'notAuthenticated'
+  },
+
+  'LogoutController':{
     '*': 'isAuthenticated'
   },
 
-  'AuthController':{
+  'RegisterController':{
     '*': 'notAuthenticated'
   }
 
